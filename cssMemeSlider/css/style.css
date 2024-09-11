@@ -16,13 +16,11 @@ body {
     margin: 40px 40px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-}
-.slider__wrapper {
     width: 100%;
     overflow: hidden;
+    /* height: 100vh; */
 }
-.slider__inner {
+.slider__wrapper {
     display: flex;
     width: 400%;
     height: 100%;
@@ -38,39 +36,22 @@ img {
     object-fit: cover;
 }
 
-.slider__inner input[name="radio"] {
-    width: 0%;
+.slider input[name="radio"] {
+    display: none;
  }
 
- #radio__one:checked ~ .first {
+ #radio__one:checked ~ .slider__wrapper .first {
     margin-left: 0;
  }
- #radio__two:checked ~ .first {
+ #radio__two:checked ~ .slider__wrapper .first {
     margin-left: -25%;
  }
- #radio__three:checked ~ .first {
+ #radio__three:checked ~ .slider__wrapper .first {
     margin-left: -50%;
  }
- #radio__four:checked ~ .first {
+ #radio__four:checked ~ .slider__wrapper .first {
     margin-left: -75%;
  }
-/* #r1:checked {
-    margin-left: 0;
-    transition: all 0.5s ease;
- }
- #r2:checked {
-    margin-left: -50%;
-    transition: all 0.5s ease;
- }
- #r3:checked {
-    margin-left: -50%;
-    transition: all 0.5s ease;
- }
- #r4:checked {
-    margin-left: -50%;
-    transition: all 0.5s ease;
- } */
-
 
 /* text and dots */
 .slider__content {
@@ -99,52 +80,37 @@ p {
     font-size: 1.6em;
     color: white;
 }
-.slider__dots {
-    display: flex;
-}
 .dots {
     display: flex;
  }
 
-.dot {
-    margin: 10px;
-    background-color: white;
-    border-radius: 100%;
-    border: 2px solid white;
-    width: 15px;
-    height: 15px;
+label {
+    display: block;
+    padding: 12px;
+    width: 3rem;
+    height: 4rem;
     cursor: pointer;
-}
+  }
 
-/* .dot:hover {
-    background-color: gray;
-} */
-/* .label_dot {
-    background-color: white;
+  .slider__content .dots label div {
+    width: 2rem;
+    height: 2rem;
     border-radius: 100%;
     border: 2px solid white;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-} */
-/* .in {
-    margin: 10px;
-    border-radius: 100%;
-    border: 2px solid white;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-} */
+    background: white;
+  }
 
+  .slider label div:hover {
+    background: rgb(243, 225, 125);
+    border:2px solid rgb(243, 225, 125);
+  }
 
-/* .active {
-    background-color: gray;
-    margin: 10px;
-    border-radius: 100%;
-    border: 2px solid white;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-} */
+  #radio__one:checked ~ .slider__content .dots label:nth-of-type(1) div,
+  #radio__two:checked ~ .slider__content .dots label:nth-of-type(2) div,
+  #radio__three:checked ~ .slider__content .dots label:nth-of-type(3) div,
+  #radio__four:checked ~ .slider__content .dots label:nth-of-type(4) div {
+    background: none;
+  }
+
 
 

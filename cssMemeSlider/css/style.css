@@ -81,7 +81,7 @@ p {
     display: block;
     width: 100%;
     font-weight: 400;
-    font-size: 1.6em;
+    font-size: 1.19em;
     color: white;
 }
 #radio__one:checked ~ .slider__content .slider__descr .slider__block .text_first {
@@ -112,24 +112,17 @@ label {
 
 .slider__content .dots label div {
     margin: 0 auto;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
     border: 0.1875em solid white;
     background: white;
 }
-  
-/* .slider__content .dots .dot .dot_one {
-    background: none;
-} */
+
 .slider label div:hover {
     background: rgb(243, 225, 125);
     border: 0.1875em solid rgb(243, 225, 125);
 }
-/* #radio__one:checked .slider__content .dots .dot .dot_one {
-    background: none;
-} */
-
 
 #radio__one:checked ~ .slider__content .dots label:nth-of-type(1) div,
 #radio__two:checked ~ .slider__content .dots label:nth-of-type(2) div,
@@ -143,22 +136,8 @@ label {
         align-items: center;
         flex-direction: column-reverse;
     }
-    .slider__descr {
-        width: 100%;
-        overflow: hidden;
-    }
-    .slider__block {
-        display: flex;
-        width: 400%;
-    }
-    .slide__text {
-        display: flex;
-        width: 100%;
-        transition: 0.7s all;
-    }
-    .slider__content .dots label div {
-        width: 1rem;
-        height: 1rem;
+    p {
+        font-size: 1em;
     }
     .slider label div:hover {
         background: rgb(243, 225, 125);
@@ -168,6 +147,5 @@ label {
         width: 1.5rem;
         height: 1.5rem;
       }
-
 }
 

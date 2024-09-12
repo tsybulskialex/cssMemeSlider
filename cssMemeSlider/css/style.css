@@ -7,14 +7,14 @@ body {
     background-color: gray;
 }
 .container {
-    max-width: 1024px;
+    max-width: 64em;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 1em;
 }
 
 /* img */
 .slider {
-    margin: 40px auto;
+    margin: 2.5em auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -60,7 +60,7 @@ img {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 1.875em;
 }
 .slider__descr {
     width: 100%;
@@ -77,6 +77,7 @@ img {
 }
 p {
     margin: 0;
+    margin-top: 0.7em;
     display: block;
     width: 100%;
     font-weight: 400;
@@ -103,31 +104,70 @@ p {
 
 label {
     display: block;
-    padding: 12px;
+    padding: 0.75em;
     width: 3rem;
     height: 4rem;
     cursor: pointer;
   }
 
-  .slider__content .dots label div {
+.slider__content .dots label div {
+    margin: 0 auto;
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
-    border: 2px solid white;
+    border: 0.1875em solid white;
     background: white;
-  }
-
-  .slider label div:hover {
-    background: rgb(243, 225, 125);
-    border:2px solid rgb(243, 225, 125);
-  }
-
-  #radio__one:checked ~ .slider__content .dots label:nth-of-type(1) div,
-  #radio__two:checked ~ .slider__content .dots label:nth-of-type(2) div,
-  #radio__three:checked ~ .slider__content .dots label:nth-of-type(3) div,
-  #radio__four:checked ~ .slider__content .dots label:nth-of-type(4) div {
+}
+  
+/* .slider__content .dots .dot .dot_one {
     background: none;
-  }
+} */
+.slider label div:hover {
+    background: rgb(243, 225, 125);
+    border: 0.1875em solid rgb(243, 225, 125);
+}
+/* #radio__one:checked .slider__content .dots .dot .dot_one {
+    background: none;
+} */
 
 
+#radio__one:checked ~ .slider__content .dots label:nth-of-type(1) div,
+#radio__two:checked ~ .slider__content .dots label:nth-of-type(2) div,
+#radio__three:checked ~ .slider__content .dots label:nth-of-type(3) div,
+#radio__four:checked ~ .slider__content .dots label:nth-of-type(4) div {
+    background: none;
+}
+
+@media (max-width: 768px) {
+    .slider__content {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .slider__descr {
+        width: 100%;
+        overflow: hidden;
+    }
+    .slider__block {
+        display: flex;
+        width: 400%;
+    }
+    .slide__text {
+        display: flex;
+        width: 100%;
+        transition: 0.7s all;
+    }
+    .slider__content .dots label div {
+        width: 1rem;
+        height: 1rem;
+    }
+    .slider label div:hover {
+        background: rgb(243, 225, 125);
+        border: 0.1875em solid rgb(243, 225, 125);
+    }
+    label {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+}
 

@@ -122,7 +122,7 @@ label {
     background: white;
 }
 
-.slider label div:hover {
+.slider label:hover div {
     background: rgb(243, 225, 125);
     border: 0.1875em solid rgb(243, 225, 125);
 }
